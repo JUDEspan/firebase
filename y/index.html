@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="GitH()">SignUp With GitHub</button>
+    <button onclick="GitHu()">SignUp With GitHub</button>
     <div id="show"></div>
 
 
@@ -35,16 +35,11 @@
   const analytics = getAnalytics(app);
   const provider = new GithubAuthProvider();
 
-    const GitH = () => {
+    const GitHu = () => {
             signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                show.innerHTML +=`
-                <h1>Welcome ${user.displayName} </h1>
-                <p>Here is your email address ${user.email}</p>
-                <img src=${user.photoURL} alt="profile pic"/>
-                `
             })
             .catch((error)=>{
                 console.log(error);
@@ -52,7 +47,7 @@
 
         }
         
-        window.GitH = GitH
+        window.GitHu = GitHu
 </script>
 </body>
 </html>
